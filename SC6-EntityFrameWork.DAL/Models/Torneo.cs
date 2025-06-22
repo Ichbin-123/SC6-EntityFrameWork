@@ -24,6 +24,8 @@ public class Torneo
     [Required]
     public int? LocationId { get; set; } // Foreign Key Property
 
+
+    [ForeignKey("LocationId")]
     public virtual Location? Location { get; set; } // Navigation property
 
     [InverseProperty("Torneo")]

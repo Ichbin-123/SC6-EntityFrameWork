@@ -12,7 +12,7 @@ using SC6_EntityFrameWork.DAL;
 namespace SC6_EntityFrameWork.DAL.Migrations
 {
     [DbContext(typeof(TournamentContext))]
-    [Migration("20250622222410_InitialCreate")]
+    [Migration("20250622231450_InitialCreate")]
     partial class InitialCreate
     {
         /// <inheritdoc />

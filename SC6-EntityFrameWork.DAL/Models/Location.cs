@@ -21,6 +21,6 @@ public class Location
 
     [Required]
     [InverseProperty("Location")]
-    public virtual ICollection<Torneo>? Tornei { get; set; }
+    public virtual ICollection<Torneo>? Tornei { get; set; } // Navigation Property
 
 }

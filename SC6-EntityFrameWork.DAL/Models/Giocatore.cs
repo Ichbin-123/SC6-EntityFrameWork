@@ -23,5 +23,7 @@ public class Giocatore
 
     [Required]
     public  int? SquadraId { get; set; } // Foreign key
+
+    [ForeignKey("SquadraId")]
     public virtual Squadra? Squadra { get; set; } // Navigation Property
 }
