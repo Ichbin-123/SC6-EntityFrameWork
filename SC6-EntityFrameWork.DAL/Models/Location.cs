@@ -7,7 +7,7 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace SC6_EntityFrameWork.DAL.Models;
-public class Location
+public class Location : IPrintable
 {
     public int Id { get; set; }
 
@@ -22,5 +22,10 @@ public class Location
     [Required]
     [InverseProperty("Location")]
     public virtual ICollection<Torneo>? Tornei { get; set; } // Navigation Property
+
+    public string ToPrintableString()
+    {
+        return $"Id Location: {this.Id} - Nome Location: {this.Nome} - Indirizzo: {this.Indirizzo}";
+    }
 
 }

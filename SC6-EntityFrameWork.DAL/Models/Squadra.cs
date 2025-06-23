@@ -7,7 +7,7 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace SC6_EntityFrameWork.DAL.Models;
-public class Squadra
+public class Squadra : IPrintable
 {
     public int Id { get; set; }
 
@@ -21,4 +21,9 @@ public class Squadra
     [Required]
     [InverseProperty("Squadra")]
     public virtual ICollection<Prenotazione>? Prenotazioni { get; set; } // nome della navigation property in Prenotazione
+
+    public string ToPrintableString()
+    {
+        return $"Id Squadra: {this.Id} - Nome Squadra: {this.Nome}";
+    }
 }
